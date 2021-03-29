@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: black;
+}
+
+.stick {
+  width: 1200px;
+  height: 700px;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stick div {
+  width: 50px;
+  height: 150px;
+  background-color: rgb(47, 255, 57);
+  border-radius: 75px;
+  margin-left: 20px;
+
+  animation: wave 1s ease-in-out infinite alternate;
+}
+
+.stick div:nth-child(1) {
+  animation-delay: -0.3s;
+}
+.stick div:nth-child(2) {
+  animation-delay: -0.1s;
+}
+
+@keyframes wave {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
